@@ -14,7 +14,7 @@ function TabNavigation () {
     return (
         <Tab.Navigator screenOptions={{
                            tabBarActiveTintColor: '#FF9F0A',
-                           tabBarStyle: {backgroundColor: "#000000"}
+                           tabBarStyle: {backgroundColor: "#000000"},
                        }}
         >
             <Tab.Screen
@@ -26,6 +26,7 @@ function TabNavigation () {
                     headerTitle: 'Edit',
                     headerTitleStyle: {
                         color: '#FF9F0A',
+                        borderColor: '#000000'
                     },
                     headerTitleAlign: 'left',
                     headerRight: () => (
@@ -46,6 +47,20 @@ function TabNavigation () {
                 component={Alarms}
                 options={{
                     tabBarLabel: 'Alarms',
+                    headerTitle: 'Edit',
+                    headerStyle: { backgroundColor: 'rgba(0, 0, 0, 1)' },
+                    headerTitleStyle: {
+                        color: '#FF9F0A',
+                    },
+                    headerTitleAlign: 'left',
+                    headerRight: () => (
+                        <MaterialCommunityIcons
+                            name="plus"
+                            color="#FF9F0A"
+                            size={24}
+                            style={{ marginRight: 10 }}
+                        />
+                    ),
                     tabBarIcon: ({ color, size }) => (
                         <MaterialCommunityIcons name="alarm" color={color} size={28} />
                     ),
