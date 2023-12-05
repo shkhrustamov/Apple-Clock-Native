@@ -6,16 +6,14 @@ import WorldClock from "./Screens/WorldClock";
 import Alarms from "./Screens/Alarms";
 import Stopwatch from "./Screens/Stopwatch";
 import Timers from "./Screens/Timers";
+import {Text} from "react-native";
 
 const Tab = createBottomTabNavigator();
 
 function TabNavigation () {
     return (
-        <Tab.Navigator initialRouteName="Feed"
-                       screenOptions={{
+        <Tab.Navigator screenOptions={{
                            tabBarActiveTintColor: '#FF9F0A',
-                           // tabBarActiveBackgroundColor: '#000',
-                           // tabBarInactiveBackgroundColor: '#000',
                            tabBarStyle: {backgroundColor: "#000000"}
                        }}
         >
@@ -24,6 +22,20 @@ function TabNavigation () {
                 component={WorldClock}
                 options={{
                     tabBarLabel: 'WorldClock',
+                    headerStyle: { backgroundColor: 'rgba(0, 0, 0, 0.7)' },
+                    headerTitle: 'Edit',
+                    headerTitleStyle: {
+                        color: '#FF9F0A',
+                    },
+                    headerTitleAlign: 'left',
+                    headerRight: () => (
+                        <MaterialCommunityIcons
+                            name="plus"
+                            color="#FF9F0A"
+                            size={24}
+                            style={{ marginRight: 10 }}
+                        />
+                    ),
                     tabBarIcon: ({ color, size }) => (
                         <MaterialCommunityIcons name="web" color={color} size={28} />
                     ),
@@ -44,6 +56,8 @@ function TabNavigation () {
                 component={Stopwatch}
                 options={{
                     tabBarLabel: 'Stopwatch',
+                    headerStyle: { backgroundColor: 'rgba(0, 0, 0, 1)' },
+                    headerTitle: '',
                     tabBarIcon: ({ color, size }) => (
                         <MaterialCommunityIcons name="timer" color={color} size={28} />
                     ),
@@ -54,6 +68,8 @@ function TabNavigation () {
                 component={Timers}
                 options={{
                     tabBarLabel: 'Timers',
+                    headerStyle: { backgroundColor: 'rgba(0, 0, 0, 1)' },
+                    headerTitle: '',
                     tabBarIcon: ({ color, size }) => (
                         <MaterialCommunityIcons name="clock-time-seven-outline" color={color} size={28} />
                     ),
