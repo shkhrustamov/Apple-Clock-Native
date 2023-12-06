@@ -1,14 +1,3 @@
-// import React from "react";
-// import {Text} from "react-native";
-//
-// const Alarms = () => {
-//     return (
-//         <Text>Alarms</Text>
-//     );
-// }
-//
-// export default Alarms;
-// Alarms.tsx
 import React, { useState } from 'react';
 import {View, Text, Switch, StyleSheet, ScrollView} from 'react-native';
 

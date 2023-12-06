@@ -22,7 +22,7 @@ function TabNavigation () {
                 component={WorldClock}
                 options={{
                     tabBarLabel: 'WorldClock',
-                    headerStyle: { backgroundColor: 'rgba(0, 0, 0, 0.7)', borderBottomWidth: 0},
+                    headerStyle: { backgroundColor: 'rgba(0, 0, 0, 1)', borderBottomWidth: 0},
                     headerTitle: 'Edit',
                     headerTitleStyle: {
                         color: '#FF9F0A',
