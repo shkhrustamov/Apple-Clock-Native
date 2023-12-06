@@ -41,7 +41,7 @@ const Alarms: React.FC<AlarmsProps> = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         alignItems: 'center',
         backgroundColor: '#000000',
     },

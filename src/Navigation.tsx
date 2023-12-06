@@ -14,7 +14,7 @@ function TabNavigation () {
     return (
         <Tab.Navigator screenOptions={{
                            tabBarActiveTintColor: '#FF9F0A',
-                           tabBarStyle: {backgroundColor: "#000000"},
+                           tabBarStyle: {backgroundColor: "#000000", borderTopWidth: 0, borderColor: '#000000'},
                        }}
         >
             <Tab.Screen
@@ -22,7 +22,7 @@ function TabNavigation () {
                 component={WorldClock}
                 options={{
                     tabBarLabel: 'WorldClock',
-                    headerStyle: { backgroundColor: 'rgba(0, 0, 0, 0.7)' },
+                    headerStyle: { backgroundColor: 'rgba(0, 0, 0, 0.7)', borderBottomWidth: 0},
                     headerTitle: 'Edit',
                     headerTitleStyle: {
                         color: '#FF9F0A',
@@ -48,7 +48,7 @@ function TabNavigation () {
                 options={{
                     tabBarLabel: 'Alarms',
                     headerTitle: 'Edit',
-                    headerStyle: { backgroundColor: 'rgba(0, 0, 0, 1)' },
+                    headerStyle: { backgroundColor: 'rgba(0, 0, 0, 1)',borderBottomWidth: 0 },
                     headerTitleStyle: {
                         color: '#FF9F0A',
                     },
@@ -71,7 +71,7 @@ function TabNavigation () {
                 component={Stopwatch}
                 options={{
                     tabBarLabel: 'Stopwatch',
-                    headerStyle: { backgroundColor: 'rgba(0, 0, 0, 1)' },
+                    headerStyle: { backgroundColor: 'rgba(0, 0, 0, 1)',borderBottomWidth: 0 },
                     headerTitle: '',
                     tabBarIcon: ({ color, size }) => (
                         <MaterialCommunityIcons name="timer" color={color} size={28} />
@@ -83,7 +83,7 @@ function TabNavigation () {
                 component={Timers}
                 options={{
                     tabBarLabel: 'Timers',
-                    headerStyle: { backgroundColor: 'rgba(0, 0, 0, 1)' },
+                    headerStyle: { backgroundColor: 'rgba(0, 0, 0, 1)',borderBottomWidth: 0 },
                     headerTitle: '',
                     tabBarIcon: ({ color, size }) => (
                         <MaterialCommunityIcons name="clock-time-seven-outline" color={color} size={28} />
